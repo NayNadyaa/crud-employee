@@ -17,7 +17,7 @@ const EmployeeDetailModal: React.FC<Props> = ({ employee, onClose }) => {
       ></div>
 
       <div className="relative bg-white p-6 rounded-lg shadow-lg w-96 z-10">
-        <h2 className="text-lg font-bold mb-4">Detail Karyawan</h2>
+        <h2 className="text-gray-700 text-lg font-bold mb-4">Employee Detail</h2>
         <ul className="space-y-2 text-gray-700">
           <li><strong>ID : </strong> {employee.id}</li>
           <li><strong>Name : </strong> {employee.name}</li>
