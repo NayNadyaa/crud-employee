@@ -34,6 +34,11 @@ const Home: React.FC = () => {
 
   const handleSave = (employee: Employee) => {
     setSaving(true);
+    const newData = {
+      ...employee,
+      salary: Number(employee.salary),
+      age: Number(employee.age),
+    };
 
     setTimeout(() => {
         if (selectedEmployee) {
@@ -42,7 +47,7 @@ const Home: React.FC = () => {
             );
             setEmployees(updated);
         } else {
-            setEmployees([{ ...employee, id: employees?.length + 1 }, ...employees]);
+            setEmployees([{ ...newData, id: employees?.length + 1 }, ...employees]);
         }
 
         setSaving(false);
@@ -63,7 +68,7 @@ const Home: React.FC = () => {
 };
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-6">
+    <div className="bg-white shadow-md p-6">
         { deleting && <OverlaySpinner /> }
         
         <div className="flex justify-between items-center mb-4">
@@ -105,16 +110,16 @@ const Home: React.FC = () => {
                             index % 2 === 0 ? "bg-gray-50" : "bg-white"
                         } hover:bg-blue-50`}
                     >
-                        <td className="px-4 py-3 border-b">{emp.id}</td>
+                        <td className="px-4 py-3 border-b text-gray-700">{emp.id}</td>
                         <td className="px-4 py-3 border-b font-medium text-gray-700">
                             {emp.name}
                         </td>
-                        <td className="px-4 py-3 border-b">{emp.position}</td>
-                        <td className="px-4 py-3 border-b font-semibold">
+                        <td className="px-4 py-3 border-b text-gray-700">{emp.position}</td>
+                        <td className="px-4 py-3 border-b font-semibold text-gray-700">
                             Rp {emp.salary.toLocaleString("id-ID")}
                         </td>
-                        <td className="px-4 py-3 border-b">{emp.age}</td>
-                        <td className="px-4 py-3 border-b text-center space-x-2">
+                        <td className="px-4 py-3 border-b text-gray-700">{emp.age}</td>
+                        <td className="px-4 py-3 border-b text-center space-x-2 text-gray-700">
                             <button
                                 onClick={() => handleDetail(emp)}
                                 className="text-white px-3 py-1 rounded-md shadow"
