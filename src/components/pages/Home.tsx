@@ -47,7 +47,7 @@ const Home: React.FC = () => {
             );
             setEmployees(updated);
         } else {
-            setEmployees([{ ...newData, id: employees?.length + 1 }, ...employees]);
+            setEmployees([{ ...newData }, ...employees]);
         }
 
         setSaving(false);

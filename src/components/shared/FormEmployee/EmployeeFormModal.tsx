@@ -18,7 +18,7 @@ const EmployeeFormModal: React.FC<Props> = ({ onClose, onSave, employee, saving 
     formState: { errors },
   } = useForm<Employee>({
     defaultValues: {
-      id: 0,
+      id: Date.now(),
       name: "",
       position: "",
       salary: 0,
