@@ -5,6 +5,6 @@ export const getEmployees = async (): Promise<Employee[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(employeeData);
-    }, 5000);
+    }, 2000);
   });
 };
