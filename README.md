@@ -12,6 +12,11 @@ Currently, two official plugins are available:
 This is a small React project built with Vite and TailwindCSS for a simple React project.
 It implements CRUD for employee data.
 
+## Documentation App
+
+CRUD Employee
+https://jam.dev/c/5901af49-1094-465c-a9c6-528baf59bbee
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
